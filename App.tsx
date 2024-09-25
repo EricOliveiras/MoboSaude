@@ -2,6 +2,7 @@ import {StatusBar} from 'expo-status-bar';
 import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
+import { enableScreens } from 'react-native-screens';
 import React from 'react';
 import FrontPage from './pages/frontPage';
 import Form from "./pages/form";
@@ -10,6 +11,8 @@ export type RootStackParamList = {
     Form: React.JSX.Element;
     FrontPage: React.JSX.Element;
 };
+
+enableScreens();
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
